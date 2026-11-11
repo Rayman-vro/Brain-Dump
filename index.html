@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brain Dump</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="header">
+      <h1>Brain Dump</h1>
+      <p class="subtitle">Stash the thought. Get back to work.</p>
+    </header>
+
+    <section class="composer">
+      <label for="noteInput" class="sr-only">New note</label>
+      <textarea
+        id="noteInput"
+        placeholder="What's distracting you right now?"
+        rows="5"
+        autofocus
+      ></textarea>
+
+      <div class="composer-actions">
+        <span class="hint"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> to stash</span>
+        <button id="stashBtn" class="btn btn-primary" type="button">Stash Note</button>
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <div class="timeline-header">
+        <h2>Timeline <span id="noteCount" class="count">0</span></h2>
+        <button id="clearBtn" class="btn btn-ghost" type="button" hidden>Clear all</button>
+      </div>
+
+      <ul id="timeline" class="timeline" aria-live="polite"></ul>
+      <p id="emptyState" class="empty">Nothing stashed yet. Your mind is clear. ✨</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
